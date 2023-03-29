@@ -27,9 +27,11 @@ module.exports = (sequelize, DataTypes, Model) => {
     Device.init({
         // Model attributes are defined here
         id: {
-        type: DataTypes.INT,
-        allowNull: false
-        },
+            type: DataTypes.BIGINT,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
+        }, 
         device_name: {
             type: DataTypes.STRING
             // allowNull defaults to true
@@ -68,7 +70,7 @@ module.exports = (sequelize, DataTypes, Model) => {
         },
         date_out: {
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull: true
         },
     }, {
         // Other model options go here

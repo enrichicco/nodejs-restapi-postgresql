@@ -1,24 +1,23 @@
-const viotRepository  = require('../repository/task.repository');
+const viotRepository  = require('../repository/viot.repository');
 
 class ViotService {
 
     constructor() {}
 
     async getDevices() {
-        return await viotRepository.getTasks();
+        return await viotRepository.getDevices();
+    }
+    async getTelemetries() {
+        return await viotRepository.getTelemetries();
     }
 
-    async getTelemetries(task) {
-        return await taskRepository.createTask(task);
+    async createDevice(device) {
+        return await viotRepository.createDevice(device);
     }
 
-    async createTelemetry(task) {
-        return await taskRepository.updateTask(task);
+    async createTelemetry(telemetry) {
+        return await viotRepository.createTelemetry(telemetry);
     }
-
-
-
-
 
 }
 

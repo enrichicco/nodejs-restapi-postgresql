@@ -9,6 +9,7 @@ class TaskService {
     }
 
     async createTask(task) {
+        console.log(task);
         return await taskRepository.createTask(task);
     }
 

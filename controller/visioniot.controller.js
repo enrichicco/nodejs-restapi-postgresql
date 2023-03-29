@@ -18,5 +18,10 @@ class VisionIotController {
         return await viotService.createTelemetry(telemetry);
     }
 
+    async createDevice(device) {
+        logger.info('ViotController: createDevice', device);
+        return await viotService.createDevice(device);
+    }
+    
 }
 module.exports = new VisionIotController();

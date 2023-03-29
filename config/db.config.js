@@ -32,8 +32,8 @@ const connect = () => {
     db.Sequelize = Sequelize;
     db.sequelize = sequelize;
     db.tasks = require("../model/task.model")(sequelize, DataTypes, Model);
-    db.telemetries = require("../model/telemetry.model")(sequelize, DataTypes, Model);
     db.devices = require("../model/device.model")(sequelize, DataTypes, Model);
+    db.telemetries = require("../model/telemetry.model")(sequelize, DataTypes, Model);
 
     return db;
 

@@ -26,6 +26,24 @@ class TaskRepository {
         }
     }
 
+    /* 
+    
+{
+    "task": {
+      "name": "asdassad",
+      "description": "description 34 is description!!",
+      "createdby": "user",
+      "createdate": "2023-03-29T12:00:00.000Z",
+      "updatedAt": "2023-03-29T12:00:00.000Z",
+      "createdAt": "2023-03-29T12:00:00.000Z",
+      "updateddate": null,
+      "updatedby": null
+    }
+}    
+    
+    
+    */
+
     async createTask(task) {
         let data = {};
         try {

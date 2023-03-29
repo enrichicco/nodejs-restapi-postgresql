@@ -33,23 +33,25 @@ module.exports = (sequelize, DataTypes, Model) => {
     Telemetry.init({
         // Model attributes are defined here
         id: {
-          type: DataTypes.INT,
-          allowNull: false
-        },
+          type: DataTypes.BIGINT,
+          allowNull: false,
+          primaryKey: true,
+          autoIncrement: true
+        }, 
         min_cabinet_temperature: {
-            type: DataTypes.INT
+            type: DataTypes.BIGINT
             // allowNull defaults to true
         },
         max_cabinet_temperature: {
-            type: DataTypes.INT
+            type: DataTypes.BIGINT
             // allowNull defaults to true
         },
         avg_cabinet_temperature: {
-            type: DataTypes.INT
+            type: DataTypes.BIGINT
             // allowNull defaults to true
         },
         door_openings_count: {
-            type: DataTypes.INT
+            type: DataTypes.BIGINT
             // allowNull defaults to true
         },
         datetime_tmin: {
@@ -78,11 +80,11 @@ module.exports = (sequelize, DataTypes, Model) => {
         },
 
         data_upload_interval: {
-            type: DataTypes.INT
+            type: DataTypes.BIGINT
             // allowNull defaults to true
         },
         telemetry_data_sampling_interval: {
-            type: DataTypes.INT
+            type: DataTypes.BIGINT
             // allowNull defaults to true
         },
         change_portal_address: {
@@ -95,14 +97,14 @@ module.exports = (sequelize, DataTypes, Model) => {
         },
         date_out: {
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull: true
         },
         active_flag: {
             type: DataTypes.BOOLEAN,
             allowNull: false
         },
         device_id: {
-            type: DataTypes.INT,
+            type: DataTypes.BIGINT,
             allowNull: false
         },
       }, {
